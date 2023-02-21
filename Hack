@@ -1,12 +1,59 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Hack Clicker", "BloodTheme")
+local Window = Library.CreateLib("Hack Clicker Madness", "BloodTheme")
 
 local FarimingTab = Window:NewTab("Fariming")
+local ZombieTab = Window:NewTab("Zombie")
 local PlayerTab = Window:NewTab("Player")
+local EggsTap = Window:NewTab("Eggs")
 
 local Section = FarimingTab:NewSection("Clicker")
+local Zombiesection = ZombieTab:NewSection("Auto Killer Zombie")
 local playersection = PlayerTab:NewSection("Player Mods")
+local Eggssection = EggsTap:NewSection("Open Egg")
+
+--killer zombie
+
+
+Zombiesection:NewLabel("Come Soon")
+
+
+--Lava egg
+
+Eggssection:NewButton("Lava egg (2M)", "Buy Lava Egg (2M Gems)", function()
+local args = {
+    [1] = "lava"
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+
+end)
+
+--Desert egg
+
+Eggssection:NewButton("Desert egg (20M)", "Buy Desert Egg (20M Gems)", function()
+local args = {
+    [1] = "desert"
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+
+end)
+
+--Ocean egg
+
+Eggssection:NewButton("ocean egg (1B)", "Buy ocean Egg (1B Gems)", function()
+    local args = {
+        [1] = "ocean"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+--<>
+
 
 playersection:NewSlider("Walk Speed", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
@@ -110,6 +157,114 @@ Section:NewToggle("AutoRebirth ( 10k )", "It automatically clicks the rebirth (1
         if getgenv().AutoRebirth == true then
             repeat wait()
                 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(10000)
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
+--50k
+
+
+Section:NewToggle("AutoRebirth ( 50k )", "It automatically clicks the rebirth (50k) until you stop it", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+                game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(50000)
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
+--100k
+
+
+Section:NewToggle("AutoRebirth ( 100k )", "It automatically clicks the rebirth (100k) until you stop it", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+                game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(100000)
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
+--200k
+
+
+Section:NewToggle("AutoRebirth ( 200k )", "It automatically clicks the rebirth (200k) until you stop it", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+                game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(200000)
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
+--300k
+
+
+Section:NewToggle("AutoRebirth ( 300k )", "It automatically clicks the rebirth (300k) until you stop it", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+                game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(300000)
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
+--400k
+
+
+Section:NewToggle("AutoRebirth ( 400k )", "It automatically clicks the rebirth (400k) until you stop it", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+                game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(400000)
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
+--500k
+
+
+Section:NewToggle("AutoRebirth ( 500k )", "It automatically clicks the rebirth (500k) until you stop it", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+                game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(500000)
     until getgenv().AutoRebirth == false
 end
     else
