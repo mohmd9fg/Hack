@@ -1,18 +1,18 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
- 
+
 local Window = Library.CreateLib("Hack Clicker", "BloodTheme")
- 
+
 local FarimingTab = Window:NewTab("Fariming")
 local PlayerTab = Window:NewTab("Player")
- 
+
 local Section = FarimingTab:NewSection("Clicker")
 local playersection = PlayerTab:NewSection("Player Mods")
- 
+
 playersection:NewSlider("Walk Speed", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
- 
- 
+
+
 Section:NewToggle("Auto Clicker", "It automatically clicks until you stop it", function(state)
     if state then
         getgenv().AutoClick = true
@@ -23,35 +23,35 @@ Section:NewToggle("Auto Clicker", "It automatically clicks until you stop it", f
 end
     else
         getgenv().AutoClick = false
- 
+
     end
 end)
- 
- 
+
+
 --Auto Begin
- 
- 
+
+
 Section:NewToggle("AutoBegin", "", function(state)
     if state then
         getgenv().AutoBegin = true
         if getgenv().AutoBegin == true then
             repeat wait()
- 
+                
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.BeastModeService.Begin:FireServer()
     until getgenv().AutoBegin == false
 end
     else
         getgenv().AutoBegin = false
- 
+
     end
 end)
- 
- 
- 
+
+
+
 --10 <>
- 
- 
- 
+
+
+
 Section:NewToggle("AutoRebirth ( 10 )", "It automatically clicks the rebirth (tenth (10) until you stop it", function(state)
     if state then
         getgenv().AutoRebirth = true
@@ -62,14 +62,14 @@ Section:NewToggle("AutoRebirth ( 10 )", "It automatically clicks the rebirth (te
 end
     else
         getgenv().AutoRebirth = false
- 
+
     end
 end)
- 
- 
- 
+
+
+
 --100 <>
- 
+
 Section:NewToggle("AutoRebirth ( 100 )", "It automatically clicks the rebirth (100) until you stop it", function(state)
     if state then
         getgenv().AutoRebirth = true
@@ -80,12 +80,12 @@ Section:NewToggle("AutoRebirth ( 100 )", "It automatically clicks the rebirth (1
 end
     else
         getgenv().AutoRebirth = false
- 
+
     end
 end)
- 
+
 -- 1k <>
- 
+
 Section:NewToggle("AutoRebirth ( 1k )", "It automatically clicks the rebirth (1k) until you stop it", function(state)
     if state then
         getgenv().AutoRebirth = true
@@ -96,15 +96,15 @@ Section:NewToggle("AutoRebirth ( 1k )", "It automatically clicks the rebirth (1k
 end
     else
         getgenv().AutoRebirth = false
- 
+
     end
 end)
- 
- 
+
+
 --10k
- 
- 
-Section:NewToggle("AutoRebirth ( 10k )", "It automatically clicks the rebirth (1k) until you stop it", function(state)
+
+
+Section:NewToggle("AutoRebirth ( 10k )", "It automatically clicks the rebirth (10k) until you stop it", function(state)
     if state then
         getgenv().AutoRebirth = true
         if getgenv().AutoRebirth == true then
@@ -114,8 +114,9 @@ Section:NewToggle("AutoRebirth ( 10k )", "It automatically clicks the rebirth (1
 end
     else
         getgenv().AutoRebirth = false
- 
+
     end
 end)
- 
+
+
 --This is hack by ✦𝑴𝑬𝑵𝑨𝑻𝑶✦#6081  /  Mohmd9fg
