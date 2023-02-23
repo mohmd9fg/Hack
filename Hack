@@ -1,21 +1,44 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Hack Clicker Madness", "BloodTheme")
+local Window = Library.CreateLib("Hack Clicker Madness", "Ocean")
 
 local FarimingTab = Window:NewTab("Fariming")
 local ZombieTab = Window:NewTab("Zombie")
 local PlayerTab = Window:NewTab("Player")
 local EggsTap = Window:NewTab("Eggs")
+local HallowenTap = Window:NewTab("Hallowen (New!)")
+
 
 local Section = FarimingTab:NewSection("Clicker")
-local Zombiesection = ZombieTab:NewSection("Auto Killer Zombie")
+local zombiesection = ZombieTab:NewSection("Auto Killer Zombie")
 local playersection = PlayerTab:NewSection("Player Mods")
 local Eggssection = EggsTap:NewSection("Open Egg")
+local Hallowensection = HallowenTap:NewSection("Hallowen Egg (New!!)")
+
 
 --killer zombie
 
 
-Zombiesection:NewLabel("Come Soon")
+
+zombiesection:NewToggle("Dammge zombie", "", function(state)
+    if state then
+        getgenv().AutoRebirth = true
+        if getgenv().AutoRebirth == true then
+            repeat wait()
+             local args = {
+            [1] = "Zombie"
+              }
+
+            game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer(unpack(args))
+    until getgenv().AutoRebirth == false
+end
+    else
+        getgenv().AutoRebirth = false
+
+    end
+end)
+
+
 
 
 --Lava egg
@@ -64,14 +87,228 @@ Eggssection:NewButton("winter egg (10B)", "Buy winter Egg (10B Gems)", function(
     game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
     
     end)
+
+
+--Toxic egg
+
+
+
+
+Eggssection:NewButton("toxic egg (200B)", "Buy toxic Egg (200B Gems)", function()
+    local args = {
+        [1] = "toxic"
+    }
     
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+--Candy egg
+
+
+
+
+Eggssection:NewButton("Candy egg (5t)", "Buy Candy Egg (5t Gems)", function()
+    local args = {
+        [1] = "candy"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Forest egg
+
+
+
+
+Eggssection:NewButton("Forest egg (5t)", "Buy Forest Egg (20t Gems)", function()
+    local args = {
+        [1] = "forest"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Storm egg
+
+
+
+
+Eggssection:NewButton("Storm egg (5t)", "Buy Storm Egg (1q Gems)", function()
+    local args = {
+        [1] = "storm"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Blocky egg
+
+
+
+
+Eggssection:NewButton("Blocky egg (5t)", "Buy Blocky Egg (2q Gems)", function()
+    local args = {
+        [1] = "blocky"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Space egg
+
+
+
+
+Eggssection:NewButton("Space egg (10q)", "Buy Space Egg (10q Gems)", function()
+    local args = {
+        [1] = "space"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Dominus egg
+
+
+
+
+Eggssection:NewButton("Dominus egg (100q)", "Buy Dominus Egg (100q Gems)", function()
+    local args = {
+        [1] = "dominus"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Infinity egg
+
+
+
+
+Eggssection:NewButton("Infinity egg (625q)", "Buy Infinity Egg (625q Gems)", function()
+    local args = {
+        [1] = "infinity"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Future egg
+
+
+
+
+Eggssection:NewButton("Future egg (300Q)", "Buy Future Egg (300Q Gems)", function()
+    local args = {
+        [1] = "future"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--City egg
+
+
+
+
+Eggssection:NewButton("City egg (87.50s)", "Buy City Egg (87.50s Gems)", function()
+    local args = {
+        [1] = "city"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Moon egg
+
+
+
+
+Eggssection:NewButton("Moon egg (87.50s)", "Buy Moon Egg (87.50s Gems)", function()
+    local args = {
+        [1] = "Moon"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+
+--Fire egg
+
+
+
+
+Eggssection:NewButton("Fire egg (87.50s)", "Buy Fire Egg (87.50s Gems)", function()
+    local args = {
+        [1] = "fire"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
 
 
 
 --Halloween egg
 
 
-Eggssection:NewButton("halloween egg (10B)", "Buy halloween Egg (10B Gems)", function()
+Hallowensection:NewButton("halloween egg (350)", "Buy halloween Egg (350 Candies)", function()
     local args = {
         [1] = "halloween"
     }
@@ -304,6 +541,8 @@ end
 
     end
 end)
+
+
 
 
 --This is hack by ✦𝑴𝑬𝑵𝑨𝑻𝑶✦#6081  /  Mohmd9fg
