@@ -52,12 +52,44 @@ Eggssection:NewButton("ocean egg (1B)", "Buy ocean Egg (1B Gems)", function()
     end)
     
 
+
+--Winter Egg
+
+
+Eggssection:NewButton("winter egg (10B)", "Buy winter Egg (10B Gems)", function()
+    local args = {
+        [1] = "winter"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+    
+
+
+
+--Halloween egg
+
+
+Eggssection:NewButton("halloween egg (10B)", "Buy halloween Egg (10B Gems)", function()
+    local args = {
+        [1] = "halloween"
+    }
+    
+    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+    
+    end)
+
+
+
+
 --<>
 
 
 playersection:NewSlider("Walk Speed", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+
 
 
 Section:NewToggle("Auto Clicker", "It automatically clicks until you stop it", function(state)
